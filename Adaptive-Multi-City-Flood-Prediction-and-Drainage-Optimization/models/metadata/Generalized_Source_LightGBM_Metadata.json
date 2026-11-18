@@ -1,0 +1,88 @@
+{
+    "model_name": "Generalized Source-City LightGBM",
+    "model_role": "Pre-adaptation generalized flood model",
+    "training_cities": [
+        "Jakarta",
+        "Klang",
+        "Tuticorin"
+    ],
+    "excluded_target_city": "Chennai",
+    "training_samples": 14735,
+    "flood_0_samples": 7483,
+    "flood_1_samples": 7252,
+    "numerical_features": [
+        "DEM_1",
+        "NDVI_1",
+        "POP_1",
+        "RAINFALL_1",
+        "RIVER DISTANCE_1",
+        "SLOPE_1"
+    ],
+    "categorical_features": [
+        "LULC_GROUP",
+        "SOIL_1"
+    ],
+    "model_features": [
+        "DEM_1",
+        "NDVI_1",
+        "POP_1",
+        "RAINFALL_1",
+        "RIVER DISTANCE_1",
+        "SLOPE_1",
+        "LULC_GROUP",
+        "SOIL_1"
+    ],
+    "excluded_columns": [
+        "X",
+        "Y",
+        "City"
+    ],
+    "target": "Flood",
+    "classifier": "LightGBM",
+    "parameters": {
+        "n_estimators": 300,
+        "learning_rate": 0.05,
+        "random_state": 42
+    },
+    "categorical_processing": "OneHotEncoder(handle_unknown='ignore')",
+    "numerical_processing": "passthrough",
+    "scaling": false,
+    "smote": false,
+    "selection_basis": "Highest mean Leave-One-City-Out F1 among Random Forest, XGBoost and LightGBM baseline models",
+    "pooled_baseline": {
+        "accuracy": 0.802511,
+        "precision": 0.820059,
+        "recall": 0.766897,
+        "f1": 0.792587,
+        "roc_auc": 0.892387
+    },
+    "loco_baseline": {
+        "mean_accuracy": 0.546773,
+        "mean_precision": 0.536224,
+        "mean_recall": 0.694163,
+        "mean_f1": 0.599101,
+        "mean_roc_auc": 0.58605
+    },
+    "transformed_feature_count": 19,
+    "transformed_features": [
+        "numerical__DEM_1",
+        "numerical__NDVI_1",
+        "numerical__POP_1",
+        "numerical__RAINFALL_1",
+        "numerical__RIVER DISTANCE_1",
+        "numerical__SLOPE_1",
+        "categorical__LULC_GROUP_Agriculture",
+        "categorical__LULC_GROUP_Bare",
+        "categorical__LULC_GROUP_Built_Up",
+        "categorical__LULC_GROUP_Grass",
+        "categorical__LULC_GROUP_Shrub_Scrub",
+        "categorical__LULC_GROUP_Trees",
+        "categorical__LULC_GROUP_Water",
+        "categorical__LULC_GROUP_Wetland",
+        "categorical__SOIL_1_Soil_1",
+        "categorical__SOIL_1_Soil_3",
+        "categorical__SOIL_1_Soil_4",
+        "categorical__SOIL_1_Soil_6",
+        "categorical__SOIL_1_Soil_7"
+    ]
+}

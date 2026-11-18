@@ -1,0 +1,2 @@
+Total_Samples,Block_Size_Meters,Total_Blocks,Selected_Seed,Adaptation_Samples,Adaptation_Percent,Adaptation_Blocks,Adaptation_Flood_0,Adaptation_Flood_1,Holdout_Samples,Holdout_Percent,Holdout_Blocks,Holdout_Flood_0,Holdout_Flood_1,Block_Overlap
+4839,2000,63,445,3864,79.85120892746436,50,1890,1974,975,20.148791072535648,13,477,498,0

@@ -1,0 +1,49 @@
+{
+    "model": "Adaptive Random Forest",
+    "base_model": "Random Forest",
+    "source_cities": [
+        "Jakarta",
+        "Klang",
+        "Tuticorin"
+    ],
+    "target_city": "Chennai",
+    "source_samples": 14735,
+    "target_adaptation_samples": 3864,
+    "target_adaptation_blocks": 50,
+    "target_weight_candidates": [
+        1,
+        2,
+        3,
+        5,
+        8,
+        10
+    ],
+    "selected_target_weight": 8.0,
+    "selection_method": "5-fold spatial GroupKFold on Chennai adaptation blocks",
+    "selection_metric": "Mean F1",
+    "best_cv_accuracy": 0.5252403121809888,
+    "best_cv_f1": 0.5178376263982686,
+    "best_cv_roc_auc": 0.5330304217663905,
+    "final_spatial_holdout_used": false,
+    "features": [
+        "DEM_1",
+        "NDVI_1",
+        "POP_1",
+        "RAINFALL_1",
+        "RIVER DISTANCE_1",
+        "SLOPE_1",
+        "LULC_GROUP",
+        "SOIL_1"
+    ],
+    "random_forest_parameters": {
+        "n_estimators": 300,
+        "max_depth": null,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt",
+        "bootstrap": true,
+        "criterion": "gini",
+        "class_weight": null,
+        "random_state": 42
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "Method": "Domain-Shift-Aware Cumulative Target-City Adaptation",
+    "Source_Cities": [
+        "Jakarta",
+        "Klang",
+        "Tuticorin"
+    ],
+    "Target_City": "Chennai",
+    "Source_Rows": 14735,
+    "Chennai_Adaptation_Rows": 3864,
+    "Chennai_Holdout_Rows": 975,
+    "Best_Target_Weight": 1.5,
+    "Features": [
+        "DEM_1",
+        "NDVI_1",
+        "POP_1",
+        "RAINFALL_1",
+        "RIVER DISTANCE_1",
+        "SLOPE_1",
+        "LULC_GROUP",
+        "SOIL_1"
+    ],
+    "Coordinates_Used_As_Predictors": false,
+    "Holdout_Used_During_Training": false,
+    "Holdout_Used_During_Weight_Search": false,
+    "Final_Metrics": {
+        "Accuracy": 0.5456410256410257,
+        "Precision": 0.55741127348643,
+        "Recall": 0.536144578313253,
+        "F1": 0.5465711361310133,
+        "ROC_AUC": 0.5757327001928048
+    }
+}
